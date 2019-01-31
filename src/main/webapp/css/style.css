@@ -1,0 +1,13 @@
+header{
+    background: dodgerblue;
+}
+
+header li{
+    display: inline-block;
+
+}
+
+header li a{
+    padding: 5px 10px;
+    color: white;
+}
