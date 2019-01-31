@@ -1,5 +1,8 @@
 package pl.coderslab.entity;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.codehaus.jackson.map.annotate.JsonView;
 import org.hibernate.validator.constraints.NotEmpty;
 import pl.coderslab.validationGroups.FullValidationGroup;
 
@@ -17,9 +20,11 @@ public class User {
     @NotEmpty(groups = {Default.class, FullValidationGroup.class})
     private String username;
 
+    @JsonIgnore
     @NotEmpty(groups = {Default.class, FullValidationGroup.class})
     private String password;
 
+    @JsonIgnore
     @Transient
     private String repeatPwd;
 

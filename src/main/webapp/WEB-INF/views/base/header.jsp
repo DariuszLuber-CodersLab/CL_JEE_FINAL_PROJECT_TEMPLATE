@@ -16,7 +16,7 @@
         <nav class="col-9">
             <ul>
                 <li><a href="${pageContext.request.contextPath}/">Home</a></li>
-                <c:if test="${not empty user}">
+                <c:if test="${empty user}">
                     <li><a href="${pageContext.request.contextPath}/user/login">Login</a></li>
                     <li><a href="${pageContext.request.contextPath}/user/register">Register</a></li>
                 </c:if>
